@@ -124,10 +124,8 @@ function create_habit(array $errors, string $success, string $token): void
         exit;
     }
 
-    // Сохраняем привычку в сессию
     $_SESSION['habits'][] = $title;
 
-    // Успешное сообщение
     $_SESSION['flash_success'] = 'Привычка добавлена';
 
     header('Location: /');
